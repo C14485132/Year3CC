@@ -11,13 +11,13 @@ grep -o z$ words | wc -w
 tac words
 
 5)
-
+grep '^[^aeiou]*$' words | wc -w
 
 6)
-wc -L
+awk '(NR==1||length<shortest){shortest=length} END {print shortest}' file
 
 7)
-
+wc -L
 
 8)
 
