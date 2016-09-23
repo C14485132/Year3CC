@@ -1,5 +1,5 @@
 1)
-wc -w words#
+wc -w words
 
 2)
 grep -o ^a words | wc -w
@@ -8,7 +8,7 @@ grep -o ^a words | wc -w
 grep -o z$ words | wc -w
 
 4)
-tac words
+tac words > file-name
 
 5)
 grep '^[^aeiou]*$' words | wc -w
