@@ -17,23 +17,23 @@ grep '^[^aeiou]*$' words | wc -w
 awk '(NR==1||length<shortest){shortest=length} END {print shortest}' file
 
 7)
-wc -L
+wc -L words
 
 8)
 awk 'length($1) == 5 || length($1) == 4 { print $1 }' words > 4or5let
 wc -w 4or5let
 
 9)
-
+wc --bytes words
 
 10)
-
+wc -l processes
 
 11)
-
+grep -v "root" processes.txt | wc -l
 
 12)
-
+grep -E "/usr/bin/sshd" processes.txt | awk '{print $2}'
 
 13)
 
@@ -42,3 +42,4 @@ wc -w 4or5let
 
 
 15)
+awk '{print $2}' processes.txt | paste -sd+ - | bc
