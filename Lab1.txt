@@ -36,7 +36,8 @@ grep -v "root" processes.txt | wc -l
 grep -E "/usr/bin/sshd" processes.txt | awk '{print $2}'
 
 13)
-
+grep –E “sshd” processes.txt | awk '{print $3}'
+grep -w "1" processes.txt | awk ' $2 == "1" { print $8 }'
 
 14)
 
